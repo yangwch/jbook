@@ -13,4 +13,24 @@ store.dispatch({
   }
 })
 
-console.log(store.getState());
+const state = store.getState();
+
+console.log(state, state.cells?.order);
+
+
+store.dispatch({
+  type: ActionType.INSER_CELL_BEFORE,
+  payload: {
+    id: 'd',
+    type: 'text',
+  }
+})
+
+store.dispatch({
+  type: ActionType.INSER_CELL_BEFORE,
+  payload: {
+    id: 'e',
+    type: 'code',
+  }
+})
+
